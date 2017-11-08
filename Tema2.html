@@ -5,6 +5,28 @@
 <head>
 <title>Tema II la Medii de Programare</title>
 </head>
+<style>
+div.galerie {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
 <body>
 <h1>Pe urmele Fefelegii.</h1>
 <p>Nu știu dacă vă mai amintiți de nuvela Fefeleaga de Ion Agârbiceanu. Nici eu nu mai știam, dar am recuperat <a href="http://www.lecturirecenzate.ro/2013/07/fefeleaga-de-ion-agarbiceanu/">aici.</a> </p> 
@@ -12,25 +34,49 @@
 <p>E prea tristă. </p>
 <p>Într-o zi frumoasă de iarnă, împreuna cu niște prieteni, plecăm spre Bucium cu scopul expres de a vedea Detunatele, una flocoasă și alta goală. Nu râdeți că așa le zice.</p>
 <p>Mi-a plăcut. Frumoase peisaje</p>
-<!--
+<!-- UN FEL
 <img src="/Tema2/De_sus.JPG" alt="Bucium de pe deal">
 <br> Buciumul de pe deal.
 <img src="/Tema2/D_flocoasa.JPG" alt="Detunata Flocoasa">
 <br>Detunata Flocoasă. E acoperită de vegetație. Nu ai ce vedea.
 <img src="/Tema2/D_goala.JPG" alt="Detunata Goala">
-<br>Detunata Goală. Eee... aici e altă poveste. E interesantă cum nici nu gândești.-->
+<br>Detunata Goală. Eee... aici e altă poveste. E interesantă cum nici nu gândești. END UN FEL-->
+<!-- SUB FRM DE TABEL
 <table>
   <tr>
     <th><img src="/Tema2/De_sus_mic.JPG" alt="Bucium de pe deal"></th>
-    <th><img src="/Tema2/D_flocoasa_mic.JPG" alt="Detunata Flocoasa"></th>
-	<th><img src="/Tema2/D_goala_mic.JPG" alt="Detunata Goala"></th>
+    <th><img src="/Tema2/D_flocoasa_mic.JPG" alt="Detunata Flocoasă"></th>
+	<th><img src="/Tema2/D_goala_mic.JPG" alt="Detunata Goală"></th>
   </tr>
   <tr>
     <td>Buciumul de pe deal.</td>
     <td>Detunata Flocoasă. E acoperită de vegetație. Nu ai ce vedea.</td>
 	<td>Detunata Goală. Eee... aici e altă poveste. E interesantă cum nici nu gândești.</td>
   </tr>
-</table>
+</table>  END SUB FRM DE TABEL-->
+
+<div class="galerie">
+  <a target="_blank" href="/Tema2/De_sus_mic.JPG">
+    <img src="/Tema2/De_sus.JPG" alt="Bucium de pe deal" width="300" height="200">
+  </a>
+  <div class="desc">Buciumul de pe deal.</div>
+</div>
+
+<div class="galerie">
+  <a target="_blank" href="/Tema2/D_flocoasa_mic.JPG">
+    <img src="/Tema2/D_flocoasa.JPG" alt="Detunata Flocoasă" width="300" height="200">
+  </a>
+  <div class="desc">Detunata Flocoasă. E acoperită de vegetație. Nu ai ce vedea.</div>
+</div>
+
+<div class="galerie">
+  <a target="_blank" href="/Tema2/D_goala_mic.JPG">
+    <img src="/Tema2/D_goala.JPG" alt="Detunata Goală." width="300" height="200">
+  </a>
+  <div class="desc">Detunata Goală. Eee... aici e altă poveste. E interesantă cum nici nu gândești.</div>
+</div>
+
+
 </body>
 
 
