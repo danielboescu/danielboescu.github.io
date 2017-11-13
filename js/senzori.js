@@ -1,4 +1,4 @@
-//document.getElementById("id_x").innerHTML = "Salut";
+//document.getElementById("id_x").innerHTML = "Salut";hghghgg
 function on_device_orientation(e)
 {
 	document.getElementById("id_z").innerHTML = e.alpha;
