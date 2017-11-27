@@ -21,4 +21,6 @@ function on_device_motion(e)
 	var gamma = Math.atan(e.accelerationIncludingGravity.y/e.accelerationIncludingGravity.z)*180/Math.PI;
 	document.getElementById("id_rot_y").innerHTML="rot y =" + Math.round(beta* 100)/100;
 	document.getElementById("id_rot_x").innerHTML="rot x =" + Math.round(gamma* 100)/100;
+	
+	
 }
