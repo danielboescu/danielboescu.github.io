@@ -11,7 +11,7 @@
     ctx.rect(0,0,400,400);
 	ctx.stroke();
 	ctx.beginPath();
-	ctx.arc(200 + unghi1*200/90,200 + unghi2*200/90,20,0,2*Math.PI,true);
+	ctx.arc(200 + gamma*200/90,200 + beta*200/90,20,0,2*Math.PI,true);
 	ctx.fillStyle="#FF0000";//se umple cercul cu culoarea este rosu
 	//ctx.fill();
 	ctx.strokeStyle="#00FF00";
