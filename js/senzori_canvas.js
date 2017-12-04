@@ -1,6 +1,6 @@
- document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.20.7";
- //window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul
- window.addEventListener("devicemotion",on_device_motion);
+ document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.8";
+ window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul
+ //window.addEventListener("devicemotion",on_device_motion);
 
  //---------------------------------------------------------------
  function deseneaza_cerc(unghi1,unghi2)
