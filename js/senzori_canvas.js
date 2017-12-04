@@ -1,4 +1,4 @@
- document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.10";
+ document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.11";
  //window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul ---- Tot apare 
  window.addEventListener("devicemotion",on_device_motion);
 
@@ -11,7 +11,7 @@
     ctx.rect(0,0,400,400);
 	ctx.stroke();
 	ctx.beginPath();
-	ctx.arc(200 + gamma*200/90,200 + beta*200/90,20,0,2*Math.PI,true);
+	ctx.arc(200 + beta*200/90,200 + gamma*200/90,20,0,2*Math.PI,true);
 	ctx.fillStyle="#FF0000";//se umple cercul cu culoarea este rosu
 	//ctx.fill();
 	ctx.strokeStyle="#00FF00";
