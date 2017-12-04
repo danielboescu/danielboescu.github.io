@@ -1,4 +1,4 @@
- document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.12";
+ document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.13";
  //window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul ---- Tot apare 
  window.addEventListener("devicemotion",on_device_motion);
 
@@ -20,7 +20,7 @@
  }
 
  var unghiuri=(gamma:0,beta:0);
- setInterval(deseneaza_cerc,40,unghiuri)
+ setInterval(deseneaza_cerc,40,unghiuri);
  //----------------------------------------------------------------
  function on_device_motion(e)
 {
