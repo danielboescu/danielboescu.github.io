@@ -1,6 +1,6 @@
- document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.8";
- window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul
- //window.addEventListener("devicemotion",on_device_motion);
+ document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.9";
+ //window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul ---- Tot apare 
+ window.addEventListener("devicemotion",on_device_motion);
 
  //---------------------------------------------------------------
  function deseneaza_cerc(unghi1,unghi2)
@@ -16,22 +16,25 @@
 	//ctx.fill();
 	ctx.strokeStyle="#00FF00";
 	ctx.lineWidth=5;
-
 	ctx.stroke(); 
  }
+ var gamma = 0;
+ var beta = 0;
+ setInterval(deseneaza_cerc,40,gamma,beta)
  //----------------------------------------------------------------
  function on_device_motion(e)
 {
-	var beta = - Math.atan(e.accelerationIncludingGravity.x/e.accelerationIncludingGravity.z)*180/Math.PI;
-	var gamma = Math.atan(e.accelerationIncludingGravity.y/e.accelerationIncludingGravity.z)*180/Math.PI;
+	 beta = - Math.atan(e.accelerationIncludingGravity.x/e.accelerationIncludingGravity.z)*180/Math.PI;
+	 gamma = Math.atan(e.accelerationIncludingGravity.y/e.accelerationIncludingGravity.z)*180/Math.PI;
 	
-	deseneaza_cerc(beta,gamma);
+	//deseneaza_cerc(beta,gamma);  //nu mai am nevoie de a desena cercul pt ca apelez functia de setInterval
 	
 }
  //--------------------------------------------
  function on_device_orientation(e)
 {
 	deseneaza_cerc(e.gamma,e.beta);
+	
 }
 
 
