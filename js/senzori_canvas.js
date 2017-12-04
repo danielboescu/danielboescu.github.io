@@ -1,9 +1,9 @@
- document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.9";
+ document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.04.10";
  //window.addEventListener("deviceorientation",on_device_orientation);// sa nu se deseneze de 2 ori cercul ---- Tot apare 
  window.addEventListener("devicemotion",on_device_motion);
 
  //---------------------------------------------------------------
- function deseneaza_cerc(unghi1,unghi2)
+ function deseneaza_cerc()//(unghi1,unghi2)
  {
 	var canvas = document.getElementById("id_canvas");
 	var ctx = canvas.getContext("2d");
@@ -20,7 +20,7 @@
  }
  var gamma = 0;
  var beta = 0;
- setInterval(deseneaza_cerc,40,gamma,beta)
+ setInterval(deseneaza_cerc,40);//,gamma,beta)
  //----------------------------------------------------------------
  function on_device_motion(e)
 {
