@@ -3,7 +3,7 @@ document.getElementById("id_business_version").innerHTML = "Business version = 2
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
-var lista_culori=["#FF0000","#00FF00","#0000FF","#FF2310","#88FF00"];
+var lista_culori=["#FF0000","#00FF00","#0000FF","#FFFF00","#FFFFFF"];
 canvas.addEventListener("touchstart",on_start_touch);
 //---------------------------------------
 function on_start_touch(e)
