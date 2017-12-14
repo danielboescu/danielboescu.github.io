@@ -1,9 +1,9 @@
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.1";
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.2";
 
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
-var lista_culori=["#FF0000","#00FF00","#0000FF","#FFFF00","#FFFFFF"];
+var lista_culori=["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF"];
 canvas.addEventListener("touchstart",on_start_touch);
 //---------------------------------------
 function on_start_touch(e)
