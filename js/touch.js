@@ -1,4 +1,4 @@
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.5";
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.6";
 
 
 var canvas = document.getElementById("id_canvas");
@@ -15,6 +15,8 @@ for(var i=0; i<atingere.length; i++)
 	context.beginPath();
 	context.arc(atingere.item(i).pageX,atingere.item(i).pageY,20,0,2*Math.PI);
 	context.strokeStyle=lista_culori[i];
+	context.fillStyle=lista_culori[i];
+	context.fill();
 	context.lineWidth=5;
 	context.stroke(); 
 }
@@ -30,6 +32,7 @@ for(var i=0; i<atingere.length; i++)
 	context.arc(atingere.item(i).pageX,atingere.item(i).pageY,20,0,2*Math.PI);
 	context.strokeStyle=lista_culori[i];
 	context.fillStyle=lista_culori[i];
+	context.fill();
 	context.lineWidth=5;
 	context.stroke(); 
 }
