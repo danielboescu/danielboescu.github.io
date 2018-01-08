@@ -14,8 +14,8 @@ function on_position_success(e)
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
 "&markers=color:blue|label:A|"+
 	  e.coords.latitude  + "," + e.coords.longitude + 
-	  "&path=color:red|"+
-	  e.coords.latitude + "," + e.coords.longitude + "|Sala Unirii Alba Iulia";
+	  "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|Sala Unirii Alba Iulia"
+	  ;
 document.getElementById("id_img").src=map_str;
 	
 }
