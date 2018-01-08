@@ -12,7 +12,7 @@ function on_position_success(e)
 	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
 	  e.coords.latitude + "," + e.coords.longitude + "&zoom=18"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
-"&markers=color:blue|label:APOR"+
+"&markers=color:blue|label:APOR|"+
 	  e.coords.latitude + "," + e.coords.longitude;
 document.getElementById("id_img").src=map_str;
 	
