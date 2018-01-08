@@ -10,7 +10,7 @@ function on_position_success(e)
 	 document.getElementById("id_acc").innerHTML ="Accuracy =" +e.coords.accuracy + "m";
 	 document.getElementById("id_alt").innerHTML ="Altitude =" +e.coords.altitude + "m";
 	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
-	  e.coords.latitude + "," + e.coords.longitude + "&zoom=16"+"&size=400x300"+
+	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
 "&markers=color:blue|label:A|"+
 	  e.coords.latitude  + "," + e.coords.longitude + 
