@@ -21,5 +21,8 @@ function on_speech_end()
 //####################################################
 function on_speech_results(e)
 {
-	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript + " "  + e.results[0][0].confidence ;
+	for(var i= 0; i<speechmaxAlternatives; i++)
+	{
+	document.getElementById("id_speech").innerHTML+=e.results[0][i].transcript + " "  + e.results[0][i].confidence +<br>;
+	}
 }
