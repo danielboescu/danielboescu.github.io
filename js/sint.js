@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".2"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 
 //document.addEventListener("touchstart",speak);
 
@@ -23,5 +23,11 @@ function speak()
 	var enunt = new SpeechSynthesisUtterance();
 	enunt.lang = "en-US";
 	enunt.text = document.getElementById("id_text").value;
+	enunt.onend = en_end_synth;
+	document.getElementById("id_speak_button").disabled=true;
 	synth.speak(enunt);
+}function en_end_synth()
+{
+	
+	document.getElementById("id_speak_button").disabled=false;
 }
