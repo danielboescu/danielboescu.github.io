@@ -1,7 +1,7 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".1"; 
 
-var speech = new SpeechRecognition();
+var speech = new webkitSpeechRecognition();
 speech.onresult = on_speech_results;
 speech.onspeechend = on_speech_end;
 speech.lang="en-US";
