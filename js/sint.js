@@ -23,5 +23,5 @@ function speak()
 	var enunt = new SpeechSynthesisUtterance();
 	enunt.lang = "en-US";
 	enunt.text = document.getElementById("id_text").value;
-	synt.speak(enunt);
+	synth.speak(enunt);
 }
