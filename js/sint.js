@@ -16,3 +16,12 @@ function on_get_voices()
 	}
 	
 }
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+function speak()
+{
+	car enunt = new SpeechSynthesisUtterance();
+	enunt.lang = "en-US"
+	enunt.text = document.getElementById("id_text").value;
+	sint.speak(enunt);
+}
