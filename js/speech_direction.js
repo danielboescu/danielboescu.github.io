@@ -26,7 +26,7 @@ function on_speech_results(e)
 {
 	//for(var i= 0; i<speech.maxAlternatives; i++)
 //	{
-	document.getElementById("id_speech").innerHTML+=e.results[0][0].transcript;// + " "  + e.results[0][i].confidence +"<br>";
+	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript;// + " "  + e.results[0][i].confidence +"<br>";
 	navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 	//}
 }
