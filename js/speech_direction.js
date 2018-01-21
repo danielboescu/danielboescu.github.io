@@ -1,10 +1,10 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".1"; 
 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 var speech = new webkitSpeechRecognition();
-speech.maxAlternatives = 5;
+//speech.maxAlternatives = 5;
 speech.onresult = on_speech_results;
 speech.onspeechend = on_speech_end;
 speech.lang="en-US";
@@ -24,10 +24,10 @@ function on_speech_end()
 //####################################################
 function on_speech_results(e)
 {
-	for(var i= 0; i<speech.maxAlternatives; i++)
-	{
-	document.getElementById("id_speech").innerHTML+=e.results[0][i].transcript;// + " "  + e.results[0][i].confidence +"<br>";
-	}
+	//for(var i= 0; i<speech.maxAlternatives; i++)
+//	{
+	document.getElementById("id_speech").innerHTML+=e.results[0][0].transcript;// + " "  + e.results[0][i].confidence +"<br>";
+	//}
 }
 //#########################################
 function on_position_success(e)
@@ -44,7 +44,7 @@ function on_position_success(e)
 	  "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|" + document.getElementById("id_speech").innerHTML
 	  ;
 document.getElementById("id_img").src=map_str;
-	
+
 }
 //#########################################
 function on_position_failure(e)
