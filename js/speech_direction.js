@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".1"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0"; 
 
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -42,8 +42,8 @@ function on_position_success(e)
 	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
 "&markers=color:blue|label:Z|"+
-	  e.coords.latitude  + "," + e.coords.longitude + 
-	  "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|" + document.getElementById("id_speech").innerHTML
+	  e.coords.latitude  + "," + e.coords.longitude //+ 
+	 // "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|" + document.getElementById("id_speech").innerHTML
 	  ;
 document.getElementById("id_img").src=map_str;
 
