@@ -11,7 +11,7 @@ function on_light_reading()
 	document.getElementById("id_light").innerHTML = sensor.illuminance;
 }
 
-funtion on_light_error()
+function on_light_error()
 {
 	alert("canot read light sensor");
 }
