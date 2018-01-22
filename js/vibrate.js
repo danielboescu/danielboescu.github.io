@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".4"; 
 //_______________________________________________###____________________________________________
 var image = document.getElementById("id_img");
 image.addEventListener("touchstart",on_touch_start);
@@ -15,7 +15,8 @@ function start_vibrate()
 	
 	window.navigator.vibrate(150);
 }
-function on_touch_end()
+function on_touch_end(e)
 {
+	e.preventDefault();
 	clearInterval(timer_id);
 }
