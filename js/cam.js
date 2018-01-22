@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".2"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 //_______________________________________________###____________________________________________
 var constraints={audio: true,video: { facingMode: { exact: "environment" } }};
 navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
@@ -23,6 +23,6 @@ function on_touch_video(e)
 {
 	var canvas = document.getElementById("id_img");
 	var context = canvas.getContext("2d");
-	ctx.drawImage(video,0,0);
+	context.drawImage(video,0,0);
 
 }
