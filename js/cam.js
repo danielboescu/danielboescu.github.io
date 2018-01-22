@@ -8,7 +8,7 @@ var video = document.getElementById("id_video");
 //^^^^^^^^^^^^^^^^6
 function on_cam(stream)
 {
-	video.srObject=stream;
+	video.srcObject=stream;
 }
 //^^^^^^^^^^^^^^^^6
 function on_error(e)
