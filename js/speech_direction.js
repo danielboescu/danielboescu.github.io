@@ -1,6 +1,6 @@
 var d = new Date();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".0"; 
-
+navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 var speech = new webkitSpeechRecognition();
@@ -27,7 +27,7 @@ function on_speech_results(e)
 	//for(var i= 0; i<speech.maxAlternatives; i++)
 //	{
 	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript;// + " "  + e.results[0][i].confidence +"<br>";
-	navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
+	
 	//}
 }
 //#########################################
