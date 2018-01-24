@@ -1,19 +1,22 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".7"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".8"; 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 var speech = new webkitSpeechRecognition();
 var lat ;
 var lon ; 
-//speech.maxAlternatives = 5;
+
 speech.onresult = on_speech_results;
 speech.onspeechend = on_speech_end;
 speech.lang="en-US";
+
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 function recognize()
 {
-	speech.start();
+	if(speech.start()=true)
+	{}else{
+	speech.start();}
 }
 
 //####################################################
