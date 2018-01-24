@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".8"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".9"; 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -14,7 +14,7 @@ speech.lang="en-US";
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 function recognize()
 {
-	if(speech.start()=true)
+	if(speech.start())
 	{}else{
 	speech.start();}
 }
