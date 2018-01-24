@@ -45,7 +45,7 @@ function on_position_success(e) // functia care prezinta locatia utilizatorului
 	  e.coords.latitude  + "," + e.coords.longitude 
 	  ;
 	document.getElementById("id_img").src=map_str;
-	document.getElementById("id_explicatie").innerHTML="Afisarea locatiei utilizatorului.";
+	document.getElementById("id_explicatie").innerHTML = "Afisarea locatiei utilizatorului.";
 	
 }
 //#########################################
@@ -59,7 +59,7 @@ function line(e)
 	  "&path=color:red|" + lat + "," + lon + "|" + document.getElementById("id_speech").innerHTML
 	  ;
 	document.getElementById("id_img").src=map_str;
-	document.getElementById("id_explicatie").innerHTML="Trasarea liniei de conectare intre pozitia curentare si cea recunoscuta";
+	document.getElementById("id_explicatie").innerHTML = "Trasarea liniei de conectare intre pozitia curentare si cea recunoscuta";
 		
 	
 }
