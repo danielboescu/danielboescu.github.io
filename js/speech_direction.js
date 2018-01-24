@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".2"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -30,7 +30,7 @@ function on_speech_results(e)
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
 "&markers=color:blue|label:Z|"+
 	  e.coords.latitude  + "," + e.coords.longitude + 
-	  "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|" + document.getElementById("id_speech").innerHTML
+	  "&path=color:red|" + e.coords.latitude + "," + e.coords.longitude + "|" + e.results[0][0].transcript;
 	  ;
 document.getElementById("id_img").src=map_str;
 	
