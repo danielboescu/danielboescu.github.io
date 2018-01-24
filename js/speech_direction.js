@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".10"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".11"; 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -45,6 +45,7 @@ function on_position_success(e) // functia care prezinta locatia utilizatorului
 	  e.coords.latitude  + "," + e.coords.longitude 
 	  ;
 	document.getElementById("id_img").src=map_str;
+	document.getElementById("id_img").innerHTML="Afisarea locatiei utilizatorului.";
 	
 }
 //#########################################
@@ -58,6 +59,7 @@ function line(e)
 	  "&path=color:red|" + lat + "," + lon + "|" + document.getElementById("id_speech").innerHTML
 	  ;
 	document.getElementById("id_img").src=map_str;
+	document.getElementById("id_img").innerHTML="Trasarea liniei de conectare intre pozitia curentare si cea recunoscuta";
 		
 	
 }
