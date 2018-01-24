@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".6"; 
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".7"; 
 navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -27,7 +27,7 @@ function on_speech_end()
 function on_speech_results(e)
 {
 	document.getElementById("id_speech").innerHTML=e.results[0][0].transcript;
-	on_position_success();
+	line();
 }
 //#########################################
 
@@ -35,8 +35,7 @@ function on_position_success(e)
 { 
 lat = e.coords.latitude;
 lon = e.coords.longitude;
-if(document.getElementById("id_speech").innerHTML="")
-	{
+
 	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
 	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
@@ -44,7 +43,11 @@ if(document.getElementById("id_speech").innerHTML="")
 	  e.coords.latitude  + "," + e.coords.longitude 
 	  ;
 document.getElementById("id_img").src=map_str;
-	}else{
+	
+}
+//#########################################
+function line(e)
+{
 		var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
 	  lat + "," + lon + "&zoom=15"+"&size=400x300"+
 "&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
@@ -54,10 +57,8 @@ document.getElementById("id_img").src=map_str;
 	  ;
 document.getElementById("id_img").src=map_str;
 		
-	}
+	
 }
-//#########################################
-
 
 function on_position_failure(e)
 {
